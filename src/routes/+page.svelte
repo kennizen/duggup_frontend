@@ -1,63 +1,147 @@
 <script lang="ts">
   import profileImage from "../assets/images/profile_pic_4x.png";
-  import InfoLogo from "../components/nav/ui/InfoLogo.svelte";
-  import StyledClickBtn from "../components/nav/ui/StyledClickBtn.svelte";
+  import InfoLogo from "../components/ui/InfoLogo.svelte";
+  import StyledClickBtn from "../components/ui/StyledClickBtn.svelte";
   import duggup_logo from "../assets/logos/duggup_logo.svg";
+  import TimelineCard from "../components/ui/TimelineCard.svelte";
+  import TimelineHeader from "../components/ui/TimelineHeader.svelte";
 </script>
 
-<main class="pr-[22rem] mt-[3.1rem] h-[calc(100vh-(var(--nav-height)+3.1rem))] flex flex-col overflow-auto">
-  <div class="flex items-center gap-[3.5rem] ml-72">
-    <div class="flex flex-col items-center pb-16">
-      <div class="relative w-[120px] h-[120px] rounded-full border-[5px]">
-        <img src={profileImage} alt="logo" class="w-full h-full rounded-full" />
-        <p class="font-bold text-2xl text-pri text-center user-name">Krishna {@html `<br>`} Kiran</p>
+<main class="h-[calc(100vh-(var(--nav-height)))] overflow-auto flex justify-center">
+  <div class="w-full max-w-[63%] pt-14">
+    <section class="flex gap-14 pl-[7.5rem]">
+      <div class="flex flex-col items-center pb-16 relative">
+        <div class="relative w-[120px] h-[120px] rounded-full border-[5px]">
+          <img src={profileImage} alt="logo" class="w-full h-full rounded-full" />
+        </div>
+        <p class="font-bold text-2xl text-pri text-center user-img">Krishna{@html `<br>`}Kiran</p>
       </div>
-    </div>
-    <div class="flex-1 min-h-[8.625rem] flex flex-col justify-between gap-4">
-      <div class="flex justify-between gap-4">
-        <p class="max-w-[38rem] text-sm">
-          Co-Founder and CEO at Duggup - Social network for people in tech. Ex-Amazon Head of Engineering. I write
-          hot-takes on building a business, shipping delightful products and accelerating product and career growth.
-        </p>
-        <InfoLogo
-          props={{
-            logo: {
-              src: duggup_logo,
-              height: "36px",
-              width: "36px",
-            },
-            heading: "Duggup",
-            subHeading: "Co-Founder and CEO",
-          }}
-        />
-      </div>
-      <div class="flex justify-between h-[33px] items-center gap-4">
-        <StyledClickBtn>
-          <p class="text-sm">Follow</p>
-        </StyledClickBtn>
-        <div class="flex items-center gap-2">
-          <a href="#top" class="flex items-center gap-[2px] hover:underline">
-            <p class="text-pri text-sm">My website</p>
-            <i class="ri-share-box-line"></i>
-          </a>
-          <i class="ri-more-line text-2xl text-sec"></i>
+      <div class="flex-1 min-h-[8.625rem] flex flex-col justify-center gap-2">
+        <div class="flex justify-between gap-16">
+          <p class="max-w-[38rem] text-sm">
+            Co-Founder and CEO at Duggup - Social network for people in tech. Ex-Amazon Head of Engineering. I write
+            hot-takes on building a business, shipping delightful products and accelerating product and career growth.
+          </p>
+          <InfoLogo
+            props={{
+              logo: {
+                src: duggup_logo,
+                height: "36px",
+                width: "36px",
+              },
+              heading: "Duggup",
+              subHeading: "Co-Founder and CEO",
+            }}
+          />
+        </div>
+        <div class="flex justify-between h-[33px] items-center gap-16">
+          <StyledClickBtn>
+            <p class="text-sm">Follow</p>
+          </StyledClickBtn>
+          <div class="flex items-center gap-2">
+            <a href="#top" class="flex items-center gap-[2px] hover:underline">
+              <p class="text-pri text-sm">My website</p>
+              <i class="ri-share-box-line"></i>
+            </a>
+            <i class="ri-more-line text-2xl text-sec"></i>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="mt-6 relative">
+      <div class="flex max-w-[62rem]">
+        <div class="w-[11rem] pr-9 pt-[8rem]">
+          <p class="text-right text-xs text-sec relative small-timeline-point">Dec 2023</p>
+        </div>
+        <div class="flex-1 py-8 px-10 flex gap-9 flex-wrap timeline-border">
+          <TimelineCard
+            props={{
+              text: "No amount of technology can convert a bad story into a good story.",
+              url: "src/assets/images/steave.jpg",
+            }}
+          />
+          <TimelineCard
+            props={{
+              text: "Most people don't have original ideas. Here is how Sam Altman pushes himself to have a big house.",
+              url: "src/assets/images/sam.jpg",
+            }}
+          />
+        </div>
+      </div>
+      <div class="flex max-w-[62rem]">
+        <div class="w-[11rem] pr-9 relative">
+          <i class="ri-arrow-up-s-line big-timeline-point__arrow text-sec"></i>
+          <div class="py-2 relative big-timeline-point">
+            <InfoLogo
+              props={{
+                logo: {
+                  src: duggup_logo,
+                  height: "48px",
+                  width: "48px",
+                },
+                heading: "Duggup",
+                subHeading: "San Francisco Bay Area",
+                captions: ["Joined", "Nov 2023"],
+              }}
+            />
+          </div>
+        </div>
+        <div class="flex-1 py-6 px-10 flex gap-9 flex-wrap timeline-border">
+          <TimelineHeader
+            props={{
+              heading: "Co-Founder and CEO",
+              subHeading: ["Full-time", "Remote"],
+            }}
+          />
+        </div>
+      </div>
+    </section>
   </div>
-  <!-- <div class="bg-red-300 ml-44">
-    <div class="max-w-[61rem] flex">
-      <div class="bg-green-300 min-w-[10.8rem]">right</div>
-      <div>left</div>
-    </div>
-  </div> -->
 </main>
 
 <style>
-  .user-name {
+  .timeline-border {
+    background-image: url("src/assets/images/Dot.svg");
+    background-position: left;
+    background-repeat: repeat-y;
+  }
+
+  .small-timeline-point::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 3px solid rgba(0, 102, 255, 1);
+    border-radius: 100%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 110%;
+    top: 50%;
+    left: 170px;
+    transform: translateY(-50%);
+  }
+
+  .big-timeline-point::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border: 9px solid rgba(0, 102, 255, 1);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 165px;
+    transform: translateY(-50%);
+  }
+
+  .big-timeline-point__arrow {
+    position: absolute;
+    left: 164.5px;
+    font-size: 28px;
+    top: -20px;
+  }
+
+  .user-img {
+    position: absolute;
+    top: 125px;
   }
 </style>

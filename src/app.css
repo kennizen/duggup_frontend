@@ -84,13 +84,6 @@
 }
 
 @layer components {
-  .nav-underline {
-    background-image: radial-gradient(circle, rgb(82, 92, 105) 33%, rgba(255, 255, 255, 0) 0%);
-    background-position: bottom;
-    background-size: 5px 3px;
-    background-repeat: repeat-x;
-  }
-
   .hover-transition {
     @apply transition-colors duration-150 ease-linear;
   }

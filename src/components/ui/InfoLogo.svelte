@@ -14,7 +14,7 @@
 </script>
 
 <div class="flex flex-col items-end">
-  <div class="rounded-full w-[{props?.logo.width}] h-[{props?.logo.height}] overflow-clip">
+  <div class="rounded-full overflow-clip" style="width: {props?.logo.width}; height: {props?.logo.height}">
     <img src={props?.logo.src} alt="logo" class="w-full h-full" />
   </div>
   <p class="text-right font-bold mt-2">{props?.heading}</p>
