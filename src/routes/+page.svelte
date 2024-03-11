@@ -1,13 +1,13 @@
 <script lang="ts">
   import profileImage from "../assets/images/profile_pic_4x.png";
-  import InfoLogo from "../components/ui/InfoLogo.svelte";
-  import StyledClickBtn from "../components/ui/StyledClickBtn.svelte";
+  import InfoLogo from "../lib/components/ui/InfoLogo.svelte";
   import duggup_logo from "../assets/logos/duggup_logo.svg";
-  import TimelineCard from "../components/ui/TimelineCard.svelte";
-  import TimelineHeader from "../components/ui/TimelineHeader.svelte";
+  import StyledClickBtn from "$lib/components/ui/StyledClickBtn.svelte";
+  import TimelineCard from "$lib/components/ui/TimelineCard.svelte";
+  import TimelineHeader from "$lib/components/ui/TimelineHeader.svelte";
 </script>
 
-<main class="h-[calc(100vh-(var(--nav-height)))] overflow-auto flex justify-center">
+<div class="h-[calc(100vh-(var(--nav-height)))] overflow-auto flex justify-center">
   <div class="w-full max-w-[63%] pt-14">
     <section class="flex gap-14 pl-[7.5rem]">
       <div class="flex flex-col items-center pb-16 relative">
@@ -52,7 +52,7 @@
     <section class="mt-6 relative">
       <div class="flex max-w-[62rem]">
         <div class="w-[11rem] pr-9 pt-[8rem]">
-          <p class="text-right text-xs text-sec relative small-timeline-point">Dec 2023</p>
+          <p class="text-right text-xs text-sec relative small-timeline-point after:border-accent-pri">Dec 2023</p>
         </div>
         <div class="flex-1 py-8 px-10 flex gap-9 flex-wrap timeline-border">
           <TimelineCard
@@ -72,7 +72,7 @@
       <div class="flex max-w-[62rem]">
         <div class="w-[11rem] pr-9 relative">
           <i class="ri-arrow-up-s-line big-timeline-point__arrow text-sec"></i>
-          <div class="py-2 relative big-timeline-point">
+          <div class="py-2 relative big-timeline-point after:border-accent-pri">
             <InfoLogo
               props={{
                 logo: {
@@ -98,7 +98,7 @@
       </div>
     </section>
   </div>
-</main>
+</div>
 
 <style>
   .timeline-border {
@@ -112,7 +112,8 @@
     width: 16px;
     height: 16px;
     background-color: white;
-    border: 3px solid rgba(0, 102, 255, 1);
+    border-width: 3px;
+    border-style: solid;
     border-radius: 100%;
     position: absolute;
     top: 50%;
@@ -125,7 +126,8 @@
     width: 28px;
     height: 28px;
     background-color: white;
-    border: 9px solid rgba(0, 102, 255, 1);
+    border-width: 9px;
+    border-style: solid;
     border-radius: 100%;
     position: absolute;
     top: 50%;

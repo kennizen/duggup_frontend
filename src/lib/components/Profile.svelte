@@ -1,5 +1,5 @@
 <script>
-  import profileImage from "../assets/images/profile_pic_4x.png";
+  import profileImage from "../../assets/images/profile_pic_4x.png";
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
 </script>
 

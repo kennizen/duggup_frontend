@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { NonEmptyArray } from "../../types/array";
+  import type { NonEmptyArray } from "../../../types/array";
 
   interface IProps {
     heading: string;

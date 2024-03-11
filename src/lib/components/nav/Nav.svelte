@@ -1,9 +1,9 @@
 <script lang="ts">
-  import duggup_logo from "../../assets/logos/duggup_logo_with_name.svg";
+  import duggup_logo from "../../../assets/logos/duggup_logo_with_name.svg";
   import NavLink from "./NavLink.svelte";
-  import homeIcon from "../../assets/icons/nav_home.svg";
-  import exploreIcon from "../../assets/icons/nav_explore.svg";
-  import learnIcon from "../../assets/icons/nav_learn.svg";
+  import homeIcon from "../../../assets/icons/nav_home.svg";
+  import exploreIcon from "../../../assets/icons/nav_explore.svg";
+  import learnIcon from "../../../assets/icons/nav_learn.svg";
   import StyledClickBtn from "../ui/StyledClickBtn.svelte";
   import Profile from "../Profile.svelte";
 

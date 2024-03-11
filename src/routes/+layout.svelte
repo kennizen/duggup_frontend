@@ -1,9 +1,11 @@
 <script>
-  import "../app.css";
-  import Nav from "../components/nav/Nav.svelte";
+  import Nav from "$lib/components/nav/Nav.svelte";
   import "remixicon/fonts/remixicon.css";
+  import "../app.css";
 </script>
 
 <Nav />
 
-<slot />
+<main>
+  <slot />
+</main>
