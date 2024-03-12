@@ -8,7 +8,9 @@
 </script>
 
 <div class="rounded-xl max-w-[21.5rem] h-[14rem] flex flex-col overflow-clip border-[0.5px] border-border-sec">
-  <div class="h-[8.5rem] w-full bg-cover flex-shrink-0" style="background-image: url({props?.url});"></div>
+  <div class="h-[8.5rem] w-full bg-cover flex-shrink-0">
+    <img src={props?.url} alt="" loading="lazy" />
+  </div>
   <div class="flex-1 w-full flex items-center px-6 bg-white">
     <p class="text-sm card-overview">
       {props?.text}
