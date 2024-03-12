@@ -1,3 +1,11 @@
+import profilePic from "$lib/assets/images/profile_pic_4x.png";
+import duggupLogo from "$lib/assets/logos/duggup_logo.svg";
+import steve from "$lib/assets/images/steave.jpg";
+import sam from "$lib/assets/images/sam.jpg";
+import computer from "$lib/assets/images/computer.jpg";
+import arbitary from "$lib/assets/images/arbitary.png";
+import betterNowLogo from "$lib/assets/images/com.jfif";
+
 export type UserData = {
   avatar: string;
   name: {
@@ -40,7 +48,7 @@ export type UserInfoById = {
 };
 
 export const userData: UserData = {
-  avatar: "src/lib/assets/images/profile_pic_4x.png",
+  avatar: profilePic,
   name: {
     firstname: "Krishna",
     middlename: "",
@@ -50,7 +58,7 @@ export const userData: UserData = {
 
 export const userDataById: UserInfoById = {
   userInfo: {
-    avatar: "src/lib/assets/images/profile_pic_4x.png",
+    avatar: profilePic,
     name: {
       firstname: "Krishna",
       middlename: "",
@@ -61,7 +69,7 @@ export const userDataById: UserInfoById = {
   },
   work: {
     company: {
-      logo: "src/lib/assets/logos/duggup_logo.svg",
+      logo: duggupLogo,
       name: "Duggup",
     },
     designation: "Co-Founder and CEO",
@@ -71,11 +79,11 @@ export const userDataById: UserInfoById = {
       date: "Dec 2023",
       posts: [
         {
-          cover: "src/lib/assets/images/steave.jpg",
+          cover: steve,
           desc: "No amount of technology can convert a bad story into a good story.",
         },
         {
-          cover: "src/lib/assets/images/sam.jpg",
+          cover: sam,
           desc: "Most people don't have original ideas. Here is how Sam Altman pushes himself to have a big house.",
         },
       ],
@@ -86,7 +94,7 @@ export const userDataById: UserInfoById = {
           jobType: ["Full-time", "Remote"],
           joinedDate: "Nov 2023",
           location: "San Francisco Bay Area",
-          logo: "src/lib/assets/logos/duggup_logo.svg",
+          logo: duggupLogo,
         },
       },
     },
@@ -94,11 +102,11 @@ export const userDataById: UserInfoById = {
       date: "Nov 2023",
       posts: [
         {
-          cover: "src/lib/assets/images/computer.jpg",
+          cover: computer,
           desc: "Startup Lesson I am reflecting. Don't build for the 'average person'.",
         },
         {
-          cover: "src/lib/assets/images/arbitary.png",
+          cover: arbitary,
           desc: "Your biggest regrets at 80 will be acts of omission.",
         },
       ],
@@ -109,7 +117,7 @@ export const userDataById: UserInfoById = {
           jobType: ["Full-time"],
           joinedDate: "Sept 2022",
           location: "San Francisco Bay Area",
-          logo: "src/lib/assets/images/com.jfif",
+          logo: betterNowLogo,
         },
       },
     },

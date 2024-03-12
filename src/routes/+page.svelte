@@ -3,6 +3,7 @@
   import StyledClickBtn from "$lib/components/ui/StyledClickBtn.svelte";
   import TimelineCard from "$lib/components/ui/TimelineCard.svelte";
   import TimelineHeader from "$lib/components/ui/TimelineHeader.svelte";
+  import dotIcon from "$lib/assets/images/Dot.png";
   import type { PageData } from "./$types";
 
   export let data: PageData;
@@ -66,7 +67,7 @@
           <div class="w-[11rem] pr-9 pt-[8rem]">
             <p class="text-right text-xs text-sec relative small-timeline-point after:border-accent-pri">{data.date}</p>
           </div>
-          <div class="flex-1 py-8 px-10 flex gap-9 flex-wrap timeline-border">
+          <div class="flex-1 py-8 px-10 flex gap-9 flex-wrap timeline-border" style="background-image: url({dotIcon});">
             {#each data.posts as post}
               <TimelineCard
                 props={{
@@ -95,7 +96,7 @@
               />
             </div>
           </div>
-          <div class="flex-1 py-6 px-10 flex gap-9 flex-wrap timeline-border">
+          <div class="flex-1 py-6 px-10 flex gap-9 flex-wrap timeline-border" style="background-image: url({dotIcon});">
             <TimelineHeader
               props={{
                 heading: data.by.company.designation,
@@ -111,7 +112,6 @@
 
 <style>
   .timeline-border {
-    background-image: url("src/lib/assets/images/Dot.svg");
     background-position: left;
     background-repeat: repeat-y;
   }
