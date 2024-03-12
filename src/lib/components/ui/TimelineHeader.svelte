@@ -1,9 +1,7 @@
 <script lang="ts">
-  import type { NonEmptyArray } from "../../../types/array";
-
   interface IProps {
     heading: string;
-    subHeading: NonEmptyArray<string>;
+    subHeading: string[];
   }
 
   export let props: IProps | undefined;

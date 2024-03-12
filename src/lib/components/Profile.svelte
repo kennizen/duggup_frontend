@@ -1,15 +1,21 @@
-<script>
-  import profileImage from "../../assets/images/profile_pic_4x.png";
+<script lang="ts">
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+  import type { LayoutData } from "../../routes/$types";
+
+  export let data: LayoutData;
 </script>
 
 <div class="flex items-center gap-3">
   <div class="w-12 h-12 rounded-full border border-pri flex items-start justify-center pt-[1px] flex-shrink-0">
-    <img src={profileImage} alt="avatar" class="rounded-full" />
+    <img src={data.userData.avatar} alt="avatar" class="rounded-full" />
   </div>
   <DropdownMenu.Root>
     <DropdownMenu.Trigger class="flex items-center gap-2 group">
-      <p class="text-xl font-medium text-pri">Krishna Kiran</p>
+      <p class="text-xl font-medium text-pri">
+        {data.userData.name.firstname}
+        {data.userData.name.middlename}
+        {data.userData.name.lastname}
+      </p>
       <span class="group-hover:bg-slate-100 rounded-full w-6 h-6 flex items-center justify-center hover-transition">
         <i class="ri-arrow-down-s-line"></i>
       </span>
