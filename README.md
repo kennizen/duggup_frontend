@@ -1,3 +1,12 @@
+### Note
+
+I am mainly a React developer as this is what my job wants me to be, but during this short period that I have learned and used Svelte was something amazing. My understanding of javascript and other UI libraries and frameworks helped me grasp the basics and core functionalities of Svelte in such a short time so this may not be the best Svelte code out there but it was an amazing learning journey to complete the assignment. I'll be learning more about what Svelte has to offer.
+
+
+
+
+
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
