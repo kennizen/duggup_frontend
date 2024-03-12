@@ -3,7 +3,7 @@ import duggupLogo from "$lib/assets/logos/duggup_logo.svg";
 import steve from "$lib/assets/images/steave.jpg";
 import sam from "$lib/assets/images/sam.jpg";
 import computer from "$lib/assets/images/computer.jpg";
-import arbitary from "$lib/assets/images/arbitary.png";
+import arbitary from "$lib/assets/images/arbitary.jpg";
 import betterNowLogo from "$lib/assets/images/com.jfif";
 
 export type UserData = {
